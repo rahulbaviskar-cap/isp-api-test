@@ -40,6 +40,19 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+			 <groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>1.9.1</version>
+				<configuration>
+				<appSettings>
+          			<property>
+					<name>JAVA_OPTS</name>
+					<value>-Dserver.port=80</value>
+				</property>
+       				</appSettings>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
